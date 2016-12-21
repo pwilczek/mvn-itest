@@ -3,6 +3,7 @@ package name.wilu.sut;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -10,6 +11,7 @@ import java.util.Properties;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
+@Category(IT.class)
 public class SutIT {
 
     private Properties properties = new Properties();

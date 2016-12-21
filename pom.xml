@@ -22,9 +22,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <excludes>
-                        <exclude>**/*IT.java</exclude>
-                    </excludes>
+                    <excludedGroups>name.wilu.sut.IT</excludedGroups>
                 </configuration>
                 <executions>
                     <execution>
@@ -34,12 +32,8 @@
                         </goals>
                         <phase>integration-test</phase>
                         <configuration>
-                            <excludes>
-                                <exclude>none</exclude>
-                            </excludes>
-                            <includes>
-                                <include>**/*IT.java</include>
-                            </includes>
+                            <includes>**/*.java</includes>
+                            <groups>name.wilu.sut.IT</groups>
                         </configuration>
                     </execution>
                 </executions>
